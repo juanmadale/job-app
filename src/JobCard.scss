@@ -1,0 +1,54 @@
+@import 'utilities';
+
+.JobCard {
+  width: 310px;
+  min-height: 245px;
+  background-color: $white;
+  border-radius: 5px;
+  margin: auto;
+
+  &-body {
+    display: inline-block;
+    width: 286px;
+    height: 147px;
+    margin: 1rem;
+    justify-content: center;
+    justify-content: center;
+    align-content: center;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    
+    .job-time-type {
+      color: $dark-gray;
+      padding-bottom: 17px;
+    }
+
+    .job-title {
+      color: $very-dark-blue;
+    }
+
+    .company-name {
+      color: $dark-gray;
+      padding: 17px 0px 26px 0px;
+    }
+
+    .job-location {
+      color: $violet;
+    }  
+  }
+
+  @media(max-width: 320px) {
+    .JobCard {
+      width: 250px;
+      min-height: auto;
+      &-body {
+        width: 200px;   
+      } 
+    }
+  }
+}
+
+

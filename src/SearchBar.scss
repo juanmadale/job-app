@@ -1,0 +1,146 @@
+@import 'utilities';
+
+.SearchBar {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  max-width: 100%;
+  column-gap: none;
+  z-index: 2;
+
+  .input-description {  
+    padding: 1rem 1rem;
+    height: 80px;
+    width: 100%;
+    
+    border: none;
+    border-right: 2px $light-gray solid;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+  }
+//se repite mucho codigo en los inputs
+  .input-location {
+  
+    padding: 1rem 1rem;
+    height: 80px;
+    max-width: 100%;
+    border: none;
+    border-right: 2px $light-gray solid;
+    outline: none;
+  }
+
+  .checkbox-search {
+    padding: 1rem 1rem;
+    height: 80px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    border-radius: 0px 5px 5px 0px;
+
+    .checkbox-full-time {
+      width: 20px;
+      position: relative;
+      margin: 20px 2.5rem 20px 0.5rem;
+      
+      label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $violet;
+        border-radius: 4px;
+
+  
+        &:after {
+          content: '';
+          width: 9px;
+          height: 5px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border: 3px solid #fcfff4;
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0;
+          transform: rotate(-45deg);
+        }
+  
+        &:hover::after {
+          opacity: 0.3;
+        }
+      }
+  
+      input[type=checkbox] {
+        visibility: hidden;
+     
+        &:checked + label:after {
+          opacity: 3;
+        }
+        &:disabled + label:after {
+          cursor: not-allowed;
+         
+        }
+        &:disabled + label {
+          background: $light-violet;
+        }        
+      }
+    }
+
+    span {
+      margin-left: -2rem;
+      margin-right: 1rem;;
+      padding-left: 0;
+      width: 70px;
+    }
+
+    .btn-search {
+      margin: 0;
+    }
+
+  }
+  
+
+
+
+}
+
+
+@media(max-width: 780px) {
+  .SearchBar { 
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+    justify-content: center;
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    .input-description {
+      height: 50px;
+      border-radius: 5px;
+     
+    }
+    .input-location {
+      height: 50px;
+      border-radius: 5px;  
+    }
+
+    .checkbox-search {
+      border-radius: 5px;  
+    }
+  }
+}
+
+
+
+
+
+
+

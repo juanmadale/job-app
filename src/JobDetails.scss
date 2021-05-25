@@ -1,0 +1,134 @@
+@import 'utilities';
+
+.JobDetails {
+  
+  .company-section {
+    border-radius: 5px;
+    position: relative;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    max-width: 100%;
+    min-height: 150px; 
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: $white;
+    margin-bottom: 3rem;
+    
+    .logo {
+      display: flex;
+      max-height: 150px;       
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .info {
+      
+      max-width: 100%;
+      display: flex;  
+      justify-content: space-between;
+      padding: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      
+
+      .name-website {
+        justify-content: left;
+        margin-right: 1rem;
+        max-width: 100%;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+        h2 {
+          padding-bottom: 1rem;
+          white-space: pre-wrap; /* css-3 */
+          white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+          white-space: -pre-wrap; /* Opera 4-6 */
+          white-space: -o-pre-wrap; /* Opera 7 */
+          word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        h4 {
+          color: $dark-gray;
+
+        }
+      }
+      .btn-company-site {
+        margin: 1rem 0 0 0;
+       
+      }    
+    }
+  }
+
+  .job-section {
+    background-color: $white;
+    max-width: 100%;
+    padding: 3rem;
+    border-radius: 5px;
+
+    .description-header {
+      display: flex;
+      padding: 1rem;
+      max-width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 3rem;
+      justify-content: space-between;
+
+      .details {
+        margin-right: 1rem;
+
+        .job-time-type {
+          color: $dark-gray;
+        }
+    
+        .job-title {
+          padding: 1rem 0rem;
+          color: $very-dark-blue;
+        } 
+    
+        .job-location {
+          color: $violet;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .btn-apply {
+        margin: 0;         
+      }
+    }
+    .description-body { 
+      white-space: pre-wrap; /* css-3 */
+      white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+      white-space: -pre-wrap; /* Opera 4-6 */
+      white-space: -o-pre-wrap; /* Opera 7 */
+      word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }   
+  }
+
+  .how-to-apply-section {
+    border-radius: 5px;
+    background-color: $light-violet;
+    max-width: 100%;
+    padding: 1rem 4rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+    .title {
+      color: $white;
+      padding: 1rem 0;
+    }
+
+
+  }
+
+
+}
